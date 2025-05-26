@@ -1,0 +1,27 @@
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "components/*": ["./components/*"],
+      "constants": ["./constants.tsx"],
+      "types": ["./types.ts"]
+    }
+  },
+  "include": ["*.ts", "*.tsx", "components/**/*.ts", "components/**/*.tsx"],
+  "exclude": ["node_modules", "dist", "vite.config.ts", "scripts/**/*.js"]
+}

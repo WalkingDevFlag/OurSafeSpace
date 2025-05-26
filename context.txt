@@ -1,0 +1,8 @@
+a romantic one-page website where my girlfriend can log in securely and submit any complaints or inconveniences she's facing in our relationship, with a soft, loving design, heart-themed elements, pastel colors, and a simple, heartfelt user interface
+
+
+
+set USER1_USERNAME= 'Bablu'
+set USER1_PASSWORD= 'Bablu@25'
+set USER2_USERNAME= 'Mauuu'
+set USER2_PASSWORD= 'Mauuu@25'

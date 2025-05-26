@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Safe Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for a romantic feel - applied to body */
+      @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600;700&display=swap');
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .font-parisienne {
+        font-family: 'Parisienne', cursive;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px); /* Controls how high the hearts float */
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .animate-float {
+        animation-name: float;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      /* Browser Autofill Style Overrides */
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px white inset !important; /* White background */
+          -webkit-text-fill-color: black !important; /* Black text */
+          caret-color: black !important; /* Ensure cursor is also black */
+          transition: background-color 5000s ease-in-out 0s; /* Delay background change */
+      }
+      
+      /* Basic Firefox autofill override - may need more specific targeting for some versions */
+      input:-moz-autofill {
+          box-shadow: 0 0 0 30px white inset !important;
+          -moz-text-fill-color: black !important; /* For older Firefox, text-fill-color might not be supported */
+          color: black !important; /* General text color for Firefox */
+          caret-color: black !important;
+      }
+       /* More modern Firefox */
+      input:-moz-ui-autofill,
+      input:-moz-ui-autofill-preview {
+        background-color: white !important;
+        color: black !important;
+        background-image: none !important; /* Remove default icons if any */
+        box-shadow: 0 0 0 30px white inset !important;
+        caret-color: black !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="/env-config.js"></script>
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>

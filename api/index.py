@@ -15,6 +15,8 @@ ENV_EMAIL_SENDER = 'EMAIL_SENDER'
 ENV_EMAIL_PASSWORD = 'EMAIL_PASSWORD'
 ENV_EMAIL_RECEIVER_1 = 'EMAIL_RECEIVER_1'
 ENV_EMAIL_RECEIVER_2 = 'EMAIL_RECEIVER_2'
+ENV_USER1_USERNAME = 'USER1_USERNAME'
+ENV_USER2_USERNAME = 'USER2_USERNAME'
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
@@ -46,11 +48,17 @@ def send_email_route():
         return jsonify({'error': 'Email configuration missing on server. Please set environment variables.'}), 500
 
     recipient_email = ''
+    # sender_display_name = '' # old variable initialization removed
     if logged_in_user == 'USER1':
         recipient_email = receiver_2_email
+        sender_display_name = os.getenv(ENV_USER1_USERNAME, logged_in_user)
     elif logged_in_user == 'USER2':
         recipient_email = receiver_1_email
+        sender_display_name = os.getenv(ENV_USER2_USERNAME, logged_in_user)
     else:
+        # This case should ideally not be reached due to prior validation
+        # but if it is, default to logged_in_user for display name as well
+        sender_display_name = logged_in_user 
         return jsonify({'error': 'Invalid user identifier'}), 400
 
     try:
@@ -60,11 +68,11 @@ def send_email_route():
         msg = MIMEMultipart('alternative')
         msg['From'] = sender_email
         msg['To'] = recipient_email
-        msg['Subject'] = f"A heartfelt message from your love ({logged_in_user})"
+        msg['Subject'] = f"A heartfelt message from your love ({sender_display_name})"
         
         msg.attach(MIMEText(html_content, 'html'))
         
-        plain_text_content = f"A heartfelt message from your love ({logged_in_user}):\n\n{message_content}"
+        plain_text_content = f"A heartfelt message from your love ({sender_display_name}):\n\n{message_content}"
         msg.attach(MIMEText(plain_text_content, 'plain'))
 
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:

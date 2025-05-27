@@ -7,12 +7,12 @@ export const APP_NAME = "Our Safe Space";
 export const COPYRIGHT_TEXT = `Crafted with love, for our love. © ${new Date().getFullYear()}`;
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: 'Discord', href: 'https://discord.com/users/yourusername', icon: <DiscordIcon className="w-5 h-5" /> },
-  { name: 'GitHub', href: 'https://github.com/yourusername', icon: <GithubIcon className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: <LinkedinIcon className="w-5 h-5" /> },
-  { name: 'WhatsApp', href: 'https://wa.me/yourphonenumber', icon: <WhatsappIcon className="w-5 h-5" /> },
-  { name: 'Instagram', href: 'https://instagram.com/yourusername', icon: <InstagramIcon className="w-5 h-5" /> },
-  { name: 'Email', href: 'mailto:youremail@example.com', icon: <MailIcon className="w-5 h-5" /> },
+  { name: 'Discord', href: 'https://discord.com/users/walking_red_flag_69', icon: <DiscordIcon className="w-5 h-5" /> },
+  { name: 'GitHub', href: 'https://github.com/WalkingDevFlag', icon: <GithubIcon className="w-5 h-5" /> },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/siddharth-panditrao/', icon: <LinkedinIcon className="w-5 h-5" /> },
+  { name: 'WhatsApp', href: 'https://wa.me/8888870956', icon: <WhatsappIcon className="w-5 h-5" /> },
+  { name: 'Instagram', href: 'https://www.instagram.com/justsidstuff64/', icon: <InstagramIcon className="w-5 h-5" /> },
+  { name: 'Email', href: 'mailto:panditrao.sid@gmail.com', icon: <MailIcon className="w-5 h-5" /> },
 ];
 
 // General Purpose Icons

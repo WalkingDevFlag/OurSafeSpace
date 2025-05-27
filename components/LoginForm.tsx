@@ -50,15 +50,15 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div className="bg-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-xl w-full max-w-md transform transition-all duration-500 hover:shadow-2xl">
-      <div className="flex flex-col items-center mb-8">
-        <div className="p-3 bg-pink-100 rounded-full mb-4">
-          <LockIcon className="w-10 h-10 text-pink-500" />
+    <div className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl w-full max-w-md transform transition-all duration-500 hover:shadow-2xl">
+      <div className="flex flex-col items-center mb-6 sm:mb-8">
+        <div className="p-3 bg-pink-100 rounded-full mb-3 sm:mb-4">
+          <LockIcon className="w-8 h-8 sm:w-10 sm:h-10 text-pink-500" />
         </div>
-        <h1 className="text-3xl md:text-4xl font-semibold text-pink-600 mb-2 text-center">Welcome Back, My Love</h1>
-        <p className="text-center text-gray-500 text-sm">Please log in to continue to our special place.</p>
+        <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center">Welcome Back, My Love</h1>
+        <p className="text-center text-gray-500 text-xs sm:text-sm">Please log in to continue to our special place.</p>
       </div>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
         <div>
           <label htmlFor="username" className="sr-only">Username</label>
           <div className="relative">
@@ -71,7 +71,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
               type="text"
               autoComplete="username"
               required
-              className="appearance-none block w-full pl-10 pr-3 py-3 bg-white text-black placeholder-gray-400 border border-pink-200 rounded-lg focus:outline-none focus:bg-white focus:ring-2 focus:ring-pink-400 focus:border-pink-400 sm:text-sm transition-colors"
+              className="appearance-none block w-full pl-10 pr-3 py-3 bg-white text-black placeholder-gray-400 border border-pink-200 rounded-lg focus:outline-none focus:bg-white focus:ring-2 focus:ring-pink-400 focus:border-pink-400 text-sm sm:text-base transition-colors"
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -91,7 +91,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
               type={showPassword ? 'text' : 'password'}
               autoComplete="current-password"
               required
-              className="appearance-none block w-full pl-10 pr-10 py-3 bg-white text-black placeholder-gray-400 border border-pink-200 rounded-lg focus:outline-none focus:bg-white focus:ring-2 focus:ring-pink-400 focus:border-pink-400 sm:text-sm transition-colors"
+              className="appearance-none block w-full pl-10 pr-10 py-3 bg-white text-black placeholder-gray-400 border border-pink-200 rounded-lg focus:outline-none focus:bg-white focus:ring-2 focus:ring-pink-400 focus:border-pink-400 text-sm sm:text-base transition-colors"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -116,10 +116,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
 
         {error && <p className="text-sm text-red-500 text-center" role="alert">{error}</p>}
 
-        <div className="flex items-center justify-between mt-2">
-          <div className="text-sm">
-            {/* Consider implementing password recovery or removing if not planned */}
-            <a href="#" className="font-medium text-pink-500 hover:text-pink-400 transition-colors" onClick={(e) => e.preventDefault()}>
+        <div className="flex items-center justify-between mt-1 sm:mt-2">
+          <div className="text-xs sm:text-sm">
+            <a href="#" className="font-medium text-pink-500 hover:text-pink-400 transition-colors" onClick={(e) => {e.preventDefault(); alert("Password recovery isn't implemented yet, my love. Try to remember or contact your sweetheart for help! ❤️");}}>
               Forgot Password?
             </a>
           </div>
@@ -132,7 +131,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
           Log In
         </button>
       </form>
-      <p className="mt-8 text-center text-xs text-gray-400">
+      <p className="mt-6 sm:mt-8 text-center text-xs text-gray-400">
         This is our private space. Your login keeps our memories safe.
       </p>
     </div>

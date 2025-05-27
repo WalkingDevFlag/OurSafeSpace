@@ -105,7 +105,7 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
 
         <button
           type="submit"
-          className="mt-4 sm:mt-6 mx-auto flex items-center justify-center py-3 px-10 border border-transparent rounded-full shadow-sm text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition-transform transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed"
+          className="mt-4 sm:mt-6 w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-semibold text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition-transform transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed"
           disabled={submission.trim() === '' || isLoading}
         >
           <SendIcon className="w-5 h-5 mr-2" />

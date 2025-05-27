@@ -33,6 +33,22 @@
         animation-timing-function: ease-in-out;
       }
 
+      /* Animation for the heart icon above "Share Your Heart" */
+      @keyframes pulse-heart-glow {
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.4)); /* Subtle pink glow */
+        }
+        50% {
+          transform: scale(1.25);
+          filter: drop-shadow(0 0 18px rgba(255, 50, 50, 0.9)); /* Vibrant red glow */
+        }
+      }
+
+      .animate-pulse-heart-glow {
+        animation: pulse-heart-glow 2s infinite ease-in-out;
+      }
+
       /* Browser Autofill Style Overrides */
       input:-webkit-autofill,
       input:-webkit-autofill:hover,

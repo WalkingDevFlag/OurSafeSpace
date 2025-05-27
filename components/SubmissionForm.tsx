@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { GroupIcon, SendIcon } from '../constants';
+import { HeartIcon, SendIcon } from '../constants'; // Changed GroupIcon to HeartIcon
 
 interface SubmissionFormProps {
   loggedInUser: string;
@@ -77,7 +76,7 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
     <div className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl w-full max-w-lg transform transition-all duration-500 hover:shadow-2xl">
       <div className="flex flex-col items-center mb-6 sm:mb-8">
          <div className="p-3 bg-pink-100 rounded-full mb-3 sm:mb-4">
-          <GroupIcon className="w-10 h-10 sm:w-12 sm:h-12 text-pink-500" />
+          <HeartIcon className="w-10 h-10 sm:w-12 sm:h-12 text-pink-500 animate-pulse-heart-glow" />
         </div>
         <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center">Share Your Heart</h1>
         <p className="text-center text-gray-500 text-xs sm:text-sm max-w-md">

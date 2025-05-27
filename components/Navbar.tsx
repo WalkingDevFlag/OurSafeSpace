@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLoggedIn, onLogout }) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <HeartIcon className="h-8 w-8 text-pink-500 mr-2" />
-            <span className="text-2xl sm:text-3xl font-semibold text-pink-600 font-parisienne">{APP_NAME}</span>
+            <span className="text-2xl sm:text-3xl font-semibold text-pink-600">{APP_NAME}</span>
           </div>
 
           {/* Mobile menu button */}

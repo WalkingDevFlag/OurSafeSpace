@@ -55,7 +55,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
         <div className="p-3 bg-pink-100 rounded-full mb-3 sm:mb-4">
           <LockIcon className="w-8 h-8 sm:w-10 sm:h-10 text-pink-500" />
         </div>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center font-parisienne">Welcome Back, My Love</h1>
+        <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center">Welcome Back, My Love</h1>
         <p className="text-center text-gray-500 text-xs sm:text-sm">Please log in to continue to our special place.</p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">

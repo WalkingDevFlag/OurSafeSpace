@@ -79,7 +79,7 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
          <div className="p-3 bg-pink-100 rounded-full mb-3 sm:mb-4">
           <GroupIcon className="w-10 h-10 sm:w-12 sm:h-12 text-pink-500" />
         </div>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center font-parisienne">Share Your Heart</h1>
+        <h1 className="text-2xl sm:text-3xl font-semibold text-pink-600 mb-1 sm:mb-2 text-center">Share Your Heart</h1>
         <p className="text-center text-gray-500 text-xs sm:text-sm max-w-md">
           Dearest, this is our special place. Feel free to share anything that's on your mind. Your words help our love blossom.
         </p>

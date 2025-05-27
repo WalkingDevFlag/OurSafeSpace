@@ -30,7 +30,9 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
     try {
       // Construct the full URL for the API endpoint
       // const apiUrl = 'http://127.0.0.1:5001/api/send-email';
-      const apiUrl = 'http://localhost:5001/api/send-email';
+      // const apiUrl = 'http://localhost:5001/api/send-email';
+      // For production, use the origin of the current window
+      const apiUrl = `${window.location.origin}/api/send-email`;
       
 
       const response = await fetch(apiUrl, {

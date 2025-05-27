@@ -29,7 +29,9 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
     // uncomment this block and remove the simulation code below.
     try {
       // Construct the full URL for the API endpoint
-      const apiUrl = `${window.location.origin}/api/send-email`;
+      // const apiUrl = 'http://127.0.0.1:5001/api/send-email';
+      const apiUrl = 'http://localhost:5001/api/send-email';
+      
 
       const response = await fetch(apiUrl, {
         method: 'POST',

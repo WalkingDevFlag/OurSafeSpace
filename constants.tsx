@@ -38,8 +38,8 @@ export const GroupIcon: React.FC<{ className?: string }> = ({ className = "w-10 
 );
 
 export const SendIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 16.571V11.5a1 1 0 011-1h.094a1 1 0 01.986.812l.007.042a1 1 0 00.986.812h.094a1 1 0 00.986-.812l.007-.042A1 1 0 0115 11.5v5.071a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
   </svg>
 );
 

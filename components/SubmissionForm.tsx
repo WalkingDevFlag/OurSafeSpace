@@ -114,7 +114,7 @@ const SubmissionForm: React.FC<SubmissionFormProps> = ({ loggedInUser }) => {
         </button>
       </form>
       <p className="mt-8 text-center text-xs text-gray-400">
-        All submissions are confidential and shared only with your partner. Your trust is our priority.
+        All submissions are confidential and shared only with ME! Your trust is MY priority.
       </p>
     </div>
   );

@@ -7,7 +7,6 @@
 ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=flat)
 ![Gmail](https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=white&style=flat)
 
----
 
 Our Safe Space is a private and loving one-page website designed for couples to share their thoughts, feelings, complaints, and inconveniences securely. It features a soft, heart-themed design with pastel colors, creating a simple and heartfelt user interface. Users can log in securely to a private space and use a submission form to share their messages.
 
@@ -24,7 +23,6 @@ Our Safe Space is a private and loving one-page website designed for couples to 
 - **Email Notifications:** Messages are sent securely via email using Gmail SMTP.
 - **Easy Deployment:** Ready for Vercel with serverless backend.
 
----
 
 ## Getting Started
 
@@ -77,7 +75,6 @@ npm run dev
 python api/index.py
 ```
 
----
 
 ## Deployment
 
@@ -87,7 +84,6 @@ This project is ready for [Vercel](https://vercel.com/):
 - The backend runs as serverless functions.
 - See `vercel.json` for routing configuration.
 
----
 
 ## License
 

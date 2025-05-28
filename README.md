@@ -10,7 +10,7 @@
 
 Our Safe Space is a private and loving one-page website designed for couples to share their thoughts, feelings, complaints, and inconveniences securely. It features a soft, heart-themed design with pastel colors, creating a simple and heartfelt user interface. Users can log in securely to a private space and use a submission form to share their messages.
 
-## Demo
+### Demo
 
 ![OurSafeSpace Demo](assets/demo.gif)
 
@@ -76,7 +76,7 @@ python api/index.py
 ```
 
 
-## Deployment
+### Deployment
 
 This project is ready for [Vercel](https://vercel.com/):
 
@@ -85,6 +85,6 @@ This project is ready for [Vercel](https://vercel.com/):
 - See `vercel.json` for routing configuration.
 
 
-## License
+### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details

@@ -21,15 +21,6 @@ ENV_USER2_USERNAME = 'USER2_USERNAME'
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 
-def load_email_template():
-    try:
-        template_path = os.path.join(os.path.dirname(__file__), 'email_template.html')
-        with open(template_path, 'r', encoding='utf-8') as f:
-            return f.read()
-    except FileNotFoundError:
-        app.logger.error("email_template.html not found in api directory.")
-        return "<p>Email template not found. Message content: {{message_content}}</p>"
-
 @app.route('/api/send-email', methods=['POST'])
 def send_email_route():
     data = request.get_json()
@@ -62,15 +53,10 @@ def send_email_route():
         return jsonify({'error': 'Invalid user identifier'}), 400
 
     try:
-        email_template = load_email_template()
-        html_content = email_template.replace('{{message_content}}', message_content)
-
         msg = MIMEMultipart('alternative')
         msg['From'] = sender_email
         msg['To'] = recipient_email
         msg['Subject'] = f"A heartfelt message from your love ({sender_display_name})"
-        
-        msg.attach(MIMEText(html_content, 'html'))
         
         plain_text_content = f"A heartfelt message from your love ({sender_display_name}):\n\n{message_content}"
         msg.attach(MIMEText(plain_text_content, 'plain'))

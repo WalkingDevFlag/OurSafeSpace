@@ -11,7 +11,9 @@
 
 Our Safe Space is a private and loving one-page website designed for couples to share their thoughts, feelings, complaints, and inconveniences securely. It features a soft, heart-themed design with pastel colors, creating a simple and heartfelt user interface. Users can log in securely to a private space and use a submission form to share their messages.
 
----
+## Demo
+
+![OurSafeSpace Demo](assets/demo.gif)
 
 ## Features
 
